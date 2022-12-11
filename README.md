@@ -1,10 +1,12 @@
 # PROYECTO PORTAFOLIO CON DJANGO 🐍💻
 
-### Este proyecto muestra una galería con una colección de portafolios creados por el usario principal, el cual tiene la opción de crear nuevos portafolios con validación de cada campo solicitado, siempre y cuando el usuario previamente haya inicado sesion.
+### Este proyecto muestra una galería con una colección de portafolios creados por el usario principal, el cual tiene la opción de crear nuevos portafolios, siempre y cuando el usuario previamente haya inicado sesion.
+
+### Se agregó validación en cada campo solicitado al momento de registrar un nuevo portafolio.
 
 ### Este proyecto web permite la creación de varios usuarios, donde cada uno puede añadir más portafolios a la galería principal.  
 
-### En la galería de portafolios se muestra cada portafolio con los siguientes campos: Título, descripción, Foto, Url de github del proyecto, tags y tambien el nombre del usario que creó el portafolio.
+### En la galería de portafolios se muestra cada portafolio con los siguientes campos: Título, descripción, Foto, Url, tags y tambien el nombre del usario que creó el portafolio.
 
 ### Link del repositorio:
   https://github.com/e-orosco/U4Portafolio 

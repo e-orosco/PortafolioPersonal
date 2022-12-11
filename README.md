@@ -1,6 +1,6 @@
 # PROYECTO PORTAFOLIO CON DJANGO 🐍💻
 
-### En este proyecto muestra una galería con una colección de portafolios creados por el usario principal, el cual tiene la opción de crear nuevos portafolios con validación de cada campo solicitado, siempre y cuando el usuario previamente haya inicado sesion.
+### Este proyecto muestra una galería con una colección de portafolios creados por el usario principal, el cual tiene la opción de crear nuevos portafolios con validación de cada campo solicitado, siempre y cuando el usuario previamente haya inicado sesion.
 
 ### Este proyecto web permite la creación de varios usuarios, donde cada uno puede añadir más portafolios a la galería principal.  
 

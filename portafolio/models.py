@@ -1,7 +1,5 @@
 from django.db import models
-from django.db.models.fields import CharField,URLField
-from django.db.models.fields.files import ImageField
-
+from django.contrib.auth.models import User
 
 
 # Create your models here.
@@ -10,11 +8,14 @@ class Perfil(models.Model):
     nombre = models.TextField()
 
 class Project(models.Model):
-    titulo = models.CharField(max_length=200)
-    descripcion = models.CharField(max_length=250)
-    foto = models.CharField( 'url de la imagen', max_length=500)
+    titulo = models.CharField(max_length=200 )
+    descripcion = models.CharField(max_length=250 )
+    foto = models.URLField( max_length=500)
     url = models.URLField(blank=True)
     tags = models.TextField()
+    user_id = models.IntegerField(default=None)
+    def username(self):
+        return User.objects.get(id=self.user_id).username
 
 class IpAddress (models.Model):
     pub_date=models.DateField("Fecha de petición")

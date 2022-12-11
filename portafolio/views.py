@@ -6,10 +6,7 @@ from portafolio.models import Perfil, Project
 from django.urls import reverse 
 from django.views import View
 from portafolio.forms import PortafolioForm
-from django.http import HttpResponse, HttpResponseRedirect
 # Create your views here.
-
-
 
 class PortafolioP(ListView):
     model = Perfil
@@ -39,10 +36,12 @@ class portafolioView(View):
         return render(request, self.template_name, self.context)
     def post (self, request): 
         form =PortafolioForm(request.POST)
-      
+        user=request.user
         print('--------5--------')
         if form.is_valid():
             print('-----------------')
-            proyecto = Project.objects.create(titulo =form.cleaned_data['titulo'],descripcion=form.cleaned_data['descripcion'], foto=form.cleaned_data['foto'],  url=form.cleaned_data['url'], tags=form.cleaned_data['tags'])
+            proyecto = Project.objects.create(titulo =form.cleaned_data['titulo'],descripcion=form.cleaned_data['descripcion'], foto=form.cleaned_data['foto'],  url=form.cleaned_data['url'], tags=form.cleaned_data['tags'], user_id = user.id)
             return redirect('index')
+        else:
+            return render(request, self.template_name, {'form':form})
 

@@ -41,10 +41,13 @@
         
                 {% if user.is_authenticated %}
                 <li class="item">
-                    <a class="link" href="{% url 'logout' %}">| Cerrar Sesion   </a>
+                    <a class="link" href="{% url 'portafolioNew' %}">| Crear Portafolio </a>
                 </li>
                 <li class="item">
-                    <a class="link" href="#">|  @{{ user.username}}</a>
+                    <a class="link" href="{% url 'logout' %}">| Cerrar Sesion </a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#">|  Bienvenido @{{ user.username}}</a>
                 </li>
                 {% else %}
                 <li class="item">
@@ -93,13 +96,12 @@
                     <p class="section-subtitle">¿Quién soy?</p>
                     <h2 class="section-title mb-3">Acerca de mi</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae aliquid ad provident aut
-                        fuga animi soluta quae eos non cupiditate voluptates dolorem, doloremque quos dicta quibusdam
-                        impedit iure nemo a iste
-                        <br>culpa! Quasi quibusdam hic recusandae delectus velit officiis explicabo voluptatibus! Nemo
-                        esse similique, voluptates labore distinctio, placeat explicabo facilis molestias, blanditiis
-                        culpa iusto voluptatem ratione eligendi a, quia temporibus velit vero ipsa sint ex voluptatum
-                        expedita aliquid! Debitis, nam!
+                        Soy Esteban Orosco desarrollador backend y actualmente me estoy capacitando en el Bootcamp de Silabuz. 
+                        Soy una persona empática, honesta y responsable. Disfruto mucho del trabajo en equipo, ya que eso genera
+                        oportunidades para aportar y complementar ideas y encontrar la mejor solución a un reto asignado. 
+                        <br> Como desarrollador web tengo conocimiento y dominio en  python, flask, django, html, css, Javascript,
+                         Bootstrap y manejo github. Me apasiona la tecnología, me encanta disfrutar el proceso de ir encontrando 
+                         soluciones a distintos problemas y con ello adquirir aprendizaje.
                     </p>
                    
                 </div>
@@ -131,6 +133,7 @@
                                     <p class="font-weight-normal">Descipción:<p>{{ portafolio.descripcion }}</p></p>
                                     <p class="font-weight-normal"></p><a  href=" {{ portafolio.url }}"> {{ portafolio.url }}</a></p>
                                     <h6 class="font-weight-normal">Tags:<p>{{ portafolio.tags }}</p></h6>
+                                    <h6 class="font-weight-normal">Creado por:<p>@{{ portafolio.username}}</p></h6>
                             </span>
                         </span>
                     </a>

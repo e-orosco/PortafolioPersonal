@@ -13,7 +13,7 @@
 
 
 
-# veamos al proyecto  💻
+# veamos el proyecto  💻
 
 ### Pasos para poder correr el proyecto:
 ### Clonar el repositorio en tu terminal.

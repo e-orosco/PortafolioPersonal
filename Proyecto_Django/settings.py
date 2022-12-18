@@ -35,6 +35,7 @@ SECRET_KEY = 'django-insecure-4+gf(ilioj5a3mia+7hd8$=cff%f7v_6y@3h=-(#=w90ns%g%o
 DEBUG = True
 
 ALLOWED_HOSTS = ['portafoliopersonal-production.up.railway.app', 'localhost','127.0.0.1' ]
+CSRF_TRUSTED_ORIGINS=['https://portafoliopersonal-production.up.railway.app']
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'

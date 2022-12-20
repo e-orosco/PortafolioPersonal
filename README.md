@@ -56,6 +56,7 @@ DATABASES = {
     Registro ("accounts/registro_user")
     Creacion de portafolio ("portafolioNew/")
 
-  
+### Link de proyecto desplegado en railway:
+https://portafoliopersonal-production.up.railway.app/
 
     
